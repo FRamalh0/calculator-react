@@ -232,8 +232,26 @@ class Calculator extends React.Component {
 
         let lastSymbol = '';
         let total = 0.0;
+        let calcAux = this.state.calc;
 
-        for(const c of this.state.calc) {
+        //DO X AND / FIRST
+        for(let i = 0; i < calcAux.length; ++i) {
+
+            if(i + 1 < calcAux.length && calcAux[i+1] !== '')
+                if(calcAux[i] === 'x') {
+                    let output = calcAux.slice(0,i-1);
+                    output.push(calcAux[i-1] * calcAux[i+1]);
+                    calcAux = [...output, ...calcAux.slice(i+2)];
+                    i = -1;
+                } else if(calcAux[i] === '/') {
+                    let output = calcAux.slice(0,i-1);
+                    output.push(calcAux[i-1] / calcAux[i+1]);
+                    calcAux = [...output, ...calcAux.slice(i+2)];
+                    i = -1;
+                }
+        }
+
+        for(const c of calcAux) {
 
             if(this.symbols.includes(c)) {
                 lastSymbol = c;
@@ -247,12 +265,6 @@ class Calculator extends React.Component {
                         break;
                     case '-':
                         total = total - parseFloat(c);
-                        break;
-                    case 'x':
-                        total = total * parseFloat(c);
-                        break;
-                    case '/':
-                        total = total / parseFloat(c);
                         break;
                     default:
                         //DO NOTHING
