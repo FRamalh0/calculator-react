@@ -2,7 +2,7 @@
 
 This calculator was made with React and can be used in your browser.
 
-<p align="center"><img src="https://i.imgur.com/VP8Nxqe.gif" width="400" height="400" alt="Layout of the website"></p>
+<p align="center"><img src="https://i.imgur.com/Iz2VCUi.gif" width="400" height="400" alt="Layout of the website"></p>
 
 Demo: [Click here!](https://framalh0.github.io/calculator-react/)
 
