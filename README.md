@@ -1,4 +1,4 @@
-# 🖩 Simple calculator
+# Calculator (React)
 
 This calculator was made with React and can be used in your browser.
 
@@ -19,7 +19,7 @@ Demo: [Click here!](https://framalh0.github.io/calculator-react/)
 
 ## 🖱️ How to use it
 
-The user can do simple math calculation (sum, subtraction, multiplication, division, percentage of the current number), by clicking in the correspondend button.
+The user can do some math calculation (sum, subtraction, multiplication, division, percentage of the current number), by clicking in the correspondend button.
 If the user, makes a mistake (missclick an digit for example), he can delete it. 
 Or if he wants to do other calculation, he can erase everything.
 
